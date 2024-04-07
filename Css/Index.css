@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Trajan';
+    src: url(Fonts/TrajanPro-Regular.ttf),
+    url(Fonts/TrajanPro-Bold.otf);
+}
+body, head, nav{
+    color: #d4af37;
+    background-color: #0a0533;
+    font-family: 'Trajan', 'Times New Roman', Times, serif;
+}
+#main-header{
+    font-size: 48px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#outerGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 10fr;
+}
+.grid-item{
+    text-align: center;
+}
+
+
+#outer-grid-header{
+     grid-column: 1/3;
+        grid-row: 1/2;
+}
+#top-items{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.hover-effect {
+    font-size: 16px; 
+    color: #bcc6cc; 
+    transition: font-size 0.3s, color 0.3s; 
+    display: inline-block;
+}
+
+.hover-effect:hover {
+    transform: scale(1.15);
+    color: #e0115f; 
+}
+section{
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+#inner-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+@media screen and (max-width: 768px) {
+    #inner-grid {
+        grid-template-columns: 1fr; /* Change to one column for small and medium devices */
+    }
+    nav{
+        align-items: center;
+        flex-direction: column;
+    }
+}
+div h1{
+    text-align: center;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Set the height of the footer */
+    background-color: #0a0533;
+    color: #d4af37;
+    text-align: center;
+    line-height: 60px; /* Center the text vertically */
+}
+p{
+    text-align: center;
+}
+@media print {
+    body {
+        background-color: white; /* Change background color to white */
+        color: white; /* Change text color to white */
+    }
+}
