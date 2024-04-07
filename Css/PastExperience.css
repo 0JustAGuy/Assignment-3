@@ -24,6 +24,8 @@ nav{
 .grid-item{
     text-align: center;
 }
+
+
 #outer-grid-header{
      grid-column: 1/3;
         grid-row: 1/2;
@@ -43,15 +45,6 @@ nav{
     transform: scale(1.15);
     color: #e0115f; 
 }
-@media screen and (max-width: 768px) {
-    #inner-grid {
-        grid-template-columns: 1fr; /* Change to one column for small and medium devices */
-    }
-    nav{
-        align-items: center;
-        flex-direction: column;
-    }
-
 section{
     grid-column: 1/3;
     grid-row: 3/4;
@@ -61,7 +54,14 @@ section{
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
 }
-
+@media screen and (max-width: 768px) {
+    #inner-grid {
+        grid-template-columns: 1fr; /* Change to one column for small and medium devices */
+    }
+    nav{
+        align-items: center;
+        flex-direction: column;
+    }
 }
 div h1{
     text-align: center;
@@ -86,5 +86,3 @@ p{
         color: white; /* Change text color to white */
     }
 }
-
-
